@@ -23,25 +23,26 @@ ENDCLASS.
 
 
 
-CLASS zrdo_factory IMPLEMENTATION.
+CLASS ZRDO_FACTORY IMPLEMENTATION.
+
 
   METHOD for_read.
-    ro_operation = NEW #( ).
-    ro_operation->ls_request_r-op = if_abap_behv=>op-r-read.
-    ro_operation->mv_operation = ro_operation->ls_request_r-op.
+*    ro_operation = NEW #( ).
+*    ro_operation->ls_request_r-op = if_abap_behv=>op-r-read.
+*    ro_operation->mv_operation = ro_operation->ls_request_r-op.
   ENDMETHOD.
 
+
   METHOD for_create.
-    ro_operation = NEW #( ).
-    ro_operation->ls_request_m-op = if_abap_behv=>op-m-create.
-    ro_operation->mv_operation = ro_operation->ls_request_m-op.
+*    ro_operation = NEW #( ).
+*    ro_operation->ls_request_m-op = if_abap_behv=>op-m-create.
+*    ro_operation->mv_operation = ro_operation->ls_request_m-op.
   ENDMETHOD.
 
 
   METHOD for_update.
-    ro_operation = NEW #( ).
-    ro_operation->ls_request_M-op = if_abap_behv=>op-m-update.
-    ro_operation->mv_operation = ro_operation->ls_request_m-op.
+*    ro_operation = NEW #( ).
+*    ro_operation->ls_request_M-op = if_abap_behv=>op-m-update.
+*    ro_operation->mv_operation = ro_operation->ls_request_m-op.
   ENDMETHOD.
-
 ENDCLASS.
